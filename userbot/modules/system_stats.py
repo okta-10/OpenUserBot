@@ -142,6 +142,7 @@ async def amireallyalive(alive):
                      f"  - Redmi Note 5 Pro (whyded) \n"
                      f"  - Redmi Note 6 Pro (twolip) \n"
                      f"  - Mi 6x (wayneed) \n"
+                     f"  - Mi A2 (jasmeme) \n"
                      f"  - Realmeme-XT (rmx1921) \n"
                      f"---------------------------------------\n"
                      f" Join Us: \n"
