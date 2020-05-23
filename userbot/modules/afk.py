@@ -85,9 +85,9 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit("**Going AFK!**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + " [ OFFLINE ]"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + " #𝔸𝔽𝕂"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=" [ OFFLINE ]"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=" #𝔸𝔽𝕂"))
 
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went AFK!")
@@ -109,7 +109,7 @@ async def type_afk_is_not_true(notafk):
     global afk_end
     user = await bot.get_me()
     last = user.last_name
-    if last and last.endswith(" [ OFFLINE ]"):
+    if last and last.endswith(" #𝔸𝔽𝕂"):
         last1 = last[:-12]
     else:
         last1 = ""
