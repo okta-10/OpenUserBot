@@ -98,7 +98,7 @@ DB_URI = os.environ.get("DATABASE_URL", None)
 
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/1png-09-07"  
+    "ALIVE_LOGO") or "https://telegra.ph/file/9df0afa5eccc47e7be11e.jpg"  
 
 # For MONGO based DataBase
 MONGO_URI = os.environ.get("MONGO_URI", None)
