@@ -169,7 +169,7 @@ async def amireallyalive(alive):
             await alive.edit(output + "\n\n *`The provided logo is invalid."
                              "\nMake sure the link is directed to the logo picture`")
     else:
-        await alive.edit(output)                  
+        await alive.edit(output)            
 
 
 
