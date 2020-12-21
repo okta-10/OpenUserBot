@@ -13,7 +13,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from telethon import events
 from telethon.tl import functions, types
-from userbot import NC_LOG_P_M_S, PM_LOGGR_BOT_API_ID, CMD_HELP, bot, TEMP_DOWNLOAD_DIRECTORY
+from userbot import NC_LOG_P_M_S, PM_LOGGR_BOT_API_ID, LOGS, CMD_HELP, bot, TEMP_DOWNLOAD_DIRECTORY
 from userbot.events import register
 
 
@@ -39,7 +39,7 @@ async def monito_p_m_s(event):
         if event.chat_id and NC_LOG_P_M_S:
                     await event.client.send_message(
                         PM_LOGGR_BOT_API_ID,
-                        "#Msged\n" + "To " +
+                        "#Conversation\n" + "With " +
                         f"[{chat.first_name}](tg://user?id={chat.id})",
                     )
 

@@ -1,16 +1,16 @@
+"""Get a user-customised google search meme!"""
+
 # Plugin By - XlayerCharon[XCB]
 # TG ~>>//@CharonCB21
-# Ported for OUB by @AshSTR (TG), ashwinstr (Github)
+# Ported for OUB by @AshSTR
 
 import asyncio
-import os 
+import os
 from PIL import Image, ImageDraw, ImageFont
-from telethon.tl.types import DocumentAttributeFilename
 from wget import download
 
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from userbot.events import register
-from userbot import googleimagesdownload
 
 @register(outgoing=True, pattern="^.fgs ((.*) ; (.*))")
 async def FakeGoogleSearch(event):
@@ -33,7 +33,7 @@ async def FakeGoogleSearch(event):
     drawing=ImageDraw.Draw(photo)
     blue=(0,0,255)
     black=(0,0,0)
-    font1=ImageFont.truetype("fonts/ProductSans-BoldItalic.ttf",20)
+    font1=ImageFont.truetype("fonts/ProductSans-BoldItalic.ttf",23)
     font2=ImageFont.truetype("fonts/ProductSans-Light.ttf",23)
     drawing.text((450, 258), result, fill=blue, font=font1)
     drawing.text((270, 37), search, fill=black, font=font2)
@@ -42,11 +42,11 @@ async def FakeGoogleSearch(event):
     await event.delete()
     reply_id = event.pattern_match.group(3) if reply else None
     await event.client.send_file(
-        event.chat.id,
+        event.chat_id,
         'downloads/test.jpg',
         reply_to_message_id=reply_id)
     os.remove('downloads/test.jpg')
-
+    
     CMD_HELP.update(
     {
         "fake_google_search": "`.fgs`\n"
